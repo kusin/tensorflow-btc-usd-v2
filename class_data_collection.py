@@ -3,10 +3,10 @@ import pandas as pd
 import numpy as np
 
 # function load dataset
-def load_csv1(df):
+def load_csv(df):
 
   # load dataset
-  dataset = pd.read_csv("dataset/BTC-USD.csv", parse_dates=['Date'])
+  dataset = pd.read_csv("dataset/"+df, parse_dates=['Date'])
 
   # chose features
   dataset = dataset[["Date", "Open", "High", "Low", "Close"]]
