@@ -57,7 +57,7 @@ def line_plot(df):
 
   # update layout lineplot
   fig.update_layout(
-    title = "History of bitcoin price",
+    title = "",
     xaxis_title = "",
     yaxis_title = "",
     xaxis=dict(tickangle=0),
@@ -84,10 +84,23 @@ with st.container():
     st.info("Dataset of BTC-USD")
     st.dataframe(dataset, use_container_width=True)
   with col2:
-    st.info("Exploration Data Analysis")
-    tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs(["OHLC Plot", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"])
-    tab1.plotly_chart(line_plot(dataset))
+    st.info("Data Visualization of BTC-USD Price")
+    st.plotly_chart(line_plot(dataset))
 
 # container-predictions
 with st.container():
-  st.info("Predictions of BTC-USD Price")
+  col1, col2 = st.columns([0.4,0.6], gap="small")
+  with col1:
+    st.info("Predictions of BTC-USD Price")
+    with st.form("my_form"):
+      st.write("Setting your model predictions")
+      algorithms = st.selectbox("Choose an algorithm", ("SB LSTM-RNN", "SB GRU-RNN"), placeholder="Choose an algorithm", index=None)
+      models = st.selectbox("Choose a models ", ("Univariate", "Multivariate"), placeholder="Choose an algorithm",index=None)
+      submitted = st.form_submit_button("Submit", type="primary")
+    with col2:
+      st.info("Evaluation models")
+      st.text("R :")
+      st.text("MAE :")
+      st.text("RMSE :")
+      st.text("MAPE :")
+      st.info("Results of Prediction BTC-USD Price")
