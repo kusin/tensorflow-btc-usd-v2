@@ -6,7 +6,7 @@ import numpy as np
 
 # import library streamlit
 import streamlit as st
-import streamlit_extras.add_vertical_space as avs
+from streamlit_extras import add_vertical_space as avs 
 
 # library data visualization
 import plotly.express as px
