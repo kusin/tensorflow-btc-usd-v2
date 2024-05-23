@@ -172,9 +172,6 @@ if __name__ == "__main__":
           # ------------------------------------------------------------------------------------------------------------- #
 
           # step 5 - model predictions
-          # reset of session model
-          tf.keras.backend.clear_session()
-
           # The GRU-RNN architecture
           # reset of session model
           tf.keras.backend.clear_session()
@@ -211,7 +208,7 @@ if __name__ == "__main__":
               x_train, y_train,
               batch_size=16, epochs=50, verbose=1, 
               validation_data=(x_test, y_test),
-              use_multiprocessing=True, shuffle=False
+              use_multiprocessing=False, shuffle=False
             )
 
           # process predictions
