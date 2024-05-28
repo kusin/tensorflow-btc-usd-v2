@@ -211,7 +211,7 @@ with st.container():
             x_train, y_train,
             batch_size=16, epochs=50, verbose=1, 
             validation_data=(x_test, y_test),
-            use_multiprocessing=True, shuffle=False
+            use_multiprocessing=False, shuffle=False
           )
 
         # process predictions
