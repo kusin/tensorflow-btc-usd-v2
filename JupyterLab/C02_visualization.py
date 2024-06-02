@@ -1,15 +1,11 @@
-import seaborn as sns
+# lib data visualizations
 import matplotlib.pyplot as plt
-import plotly.express as px
-import plotly.graph_objects as go
 
 # function of lineplot
 def line_matplotlib(df, nm_labels):
-    
-    # create figure
-    fig, ax = plt.subplots(figsize = (10,5))
-    
+
     # create lineplot
+    fig, ax = plt.subplots(figsize = (8,4))
     for x in range(len(df.columns.values)):
         ax.plot(df.index.values, df.iloc[:, x:x+1], label=nm_labels[x], linewidth=2.5)
     
@@ -21,4 +17,4 @@ def line_matplotlib(df, nm_labels):
     ax.grid(True)
     
     # show lineplot
-    plt.show()
+    return plt.show()
