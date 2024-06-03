@@ -19,9 +19,9 @@ def get_models(algorithm, x_train, y_train, x_test, y_test):
 
   # 1. The LSTM architecture
   if algorithm == "SBi-LSTM":
+    tf.keras.backend.clear_session()
     model = tf.keras.Sequential([
       tf.keras.layers.Bidirectional(LSTM(units=50, return_sequences=True, input_shape=(x_train.shape[1], 1))),
-      tf.keras.layers.Dropout(0.05),
       tf.keras.layers.Bidirectional(LSTM(units=50, return_sequences=False)),
       tf.keras.layers.Dropout(0.05),
       tf.keras.layers.Dense(1)
@@ -43,7 +43,7 @@ def get_models(algorithm, x_train, y_train, x_test, y_test):
   # fitting models
   history = model.fit(
     x_train, y_train,
-    batch_size=16, epochs=5, verbose="auto", 
+    batch_size=16, epochs=50, verbose="auto", 
     validation_data=(x_test, y_test),
     use_multiprocessing=False, shuffle=False
   )
@@ -66,5 +66,5 @@ def evaluate_models(y_test, predictions):
   mape = mean_absolute_percentage_error(y_test, predictions)
   
   # return values
-  return np.round(r,2), np.round(p_value,2), np.round(mae,2), np.round(rmse,2), np.round(mape,2)
+  return np.round(r,4), np.round(p_value,4), np.round(mae,4), np.round(rmse,4), np.round(mape,4)
 # ----------------------------------------------------------------------------------------
