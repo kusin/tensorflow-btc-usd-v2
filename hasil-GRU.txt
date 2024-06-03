@@ -13,3 +13,19 @@ P-value : 0.0
 MAE     : 1179.1679
 RMSE    : 1810.1336
 MAPE    : 0.0324
+
+Run 2 - Evaluate Models with : SBi-GRU
+--------------------------------------
+R       : 0.9975
+P-value : 0.0
+MAE     : 0.0139
+RMSE    : 0.021
+MAPE    : 0.0281
+
+Run 2 - Evaluate Models with : SBi-GRU
+--------------------------------------
+R       : 0.9975
+P-value : 0.0
+MAE     : 1014.5007
+RMSE    : 1528.0867
+MAPE    : 0.0279
