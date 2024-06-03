@@ -1,18 +1,32 @@
-(Run 1)
-
-Evaluate Models with : SBi-LSTM
--------------------------------
+Run 1 - Evaluate Models with : SBi-LSTM
+---------------------------------------
 R       : 0.9962
 P-value : 0.0
 MAE     : 0.0134
 RMSE    : 0.0193
 MAPE    : 0.0312
 
-Evaluate Models with : SBi-LSTM
--------------------------------
+Run 1 - Evaluate Models with : SBi-LSTM
+---------------------------------------
 R       : 0.9962
 P-value : 0.0
 MAE     : 973.3244
 RMSE    : 1406.1732
-MAPE    : 0.031
+MAPE    : 0.0312
+
+Run 2 - Evaluate Models with : SBi-LSTM
+---------------------------------------
+R       : 0.996
+P-value : 0.0
+MAE     : 0.0147
+RMSE    : 0.0203
+MAPE    : 0.0359
+
+Run 2 - Evaluate Models with : SBi-LSTM
+---------------------------------------
+R       : 0.996
+P-value : 0.0
+MAE     : 1071.0139
+RMSE    : 1479.7532
+MAPE    : 0.0356
 
