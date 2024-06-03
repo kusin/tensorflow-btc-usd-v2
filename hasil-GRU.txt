@@ -1,0 +1,15 @@
+Run 1 - Evaluate Models with : SBi-GRU
+--------------------------------------
+R       : 0.9974
+P-value : 0.0
+MAE     : 0.0162
+RMSE    : 0.0248
+MAPE    : 0.0326
+
+Run 1 - Evaluate Models with : SBi-GRU
+--------------------------------------
+R       : 0.9974
+P-value : 0.0
+MAE     : 1179.1679
+RMSE    : 1810.1336
+MAPE    : 0.0324
