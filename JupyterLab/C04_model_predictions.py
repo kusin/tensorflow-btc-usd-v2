@@ -5,9 +5,13 @@ from keras.layers import GRU
 
 # lib evaluate models
 from math import sqrt
+import scipy.stats as sc
 from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_percentage_error
+
+# libs manipulations array
+import numpy as np
 # ----------------------------------------------------------------------------------------
 
 # func model predictions
@@ -17,9 +21,9 @@ def get_models(algorithm, x_train, y_train, x_test, y_test):
   if algorithm == "SBi-LSTM":
     model = tf.keras.Sequential([
       tf.keras.layers.Bidirectional(LSTM(units=50, return_sequences=True, input_shape=(x_train.shape[1], 1))),
-      tf.keras.layers.Bidirectional(LSTM(units=50, return_sequences=True)),
+      tf.keras.layers.Dropout(0.05),
       tf.keras.layers.Bidirectional(LSTM(units=50, return_sequences=False)),
-      tf.keras.layers.Dropout(0.10),
+      tf.keras.layers.Dropout(0.05),
       tf.keras.layers.Dense(1)
     ])
   
@@ -27,18 +31,19 @@ def get_models(algorithm, x_train, y_train, x_test, y_test):
   if algorithm == "SBi-GRU":
     model = tf.keras.Sequential([
       tf.keras.layers.Bidirectional(GRU(units=50, return_sequences=True, input_shape=(x_train.shape[1], 1))),
+      tf.keras.layers.Dropout(0.05),
       tf.keras.layers.Bidirectional(GRU(units=50, return_sequences=False)),
-      tf.keras.layers.Dropout(0.10),
+      tf.keras.layers.Dropout(0.05),
       tf.keras.layers.Dense(1)
     ])
   
   # 2. compile models
-  model.compile(optimizer='adam', loss='mean_squared_error')
+  model.compile(optimizer='adamax', loss='mean_squared_error')
 
   # fitting models
   history = model.fit(
     x_train, y_train,
-    batch_size=16, epochs=50, verbose="auto", 
+    batch_size=16, epochs=5, verbose="auto", 
     validation_data=(x_test, y_test),
     use_multiprocessing=False, shuffle=False
   )
@@ -54,10 +59,12 @@ def get_models(algorithm, x_train, y_train, x_test, y_test):
 def evaluate_models(y_test, predictions):
 
   # calculate mae, rmse, mape
+  r = sc.mstats.pearsonr(y_test, predictions)[0]
+  p_value = sc.mstats.pearsonr(y_test, predictions)[1]
   mae = mean_absolute_error(y_test, predictions)
   rmse = sqrt(mean_squared_error(y_test, predictions))
   mape = mean_absolute_percentage_error(y_test, predictions)
   
   # return values
-  return mae, rmse, mape
+  return np.round(r,2), np.round(p_value,2), np.round(mae,2), np.round(rmse,2), np.round(mape,2)
 # ----------------------------------------------------------------------------------------
