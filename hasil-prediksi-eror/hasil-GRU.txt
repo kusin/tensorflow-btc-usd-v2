@@ -208,7 +208,7 @@ MAPE    : 0.0325
 
 Run 14 - Evaluate Models with : SBi-GRU
 -------------------------------
-R       : 0.9966
+R       : 0.9966  
 P-value : 0.0
 MAE     : 0.0141
 RMSE    : 0.0194
