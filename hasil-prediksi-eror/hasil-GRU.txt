@@ -365,3 +365,51 @@ P-value : 0.0
 MAE     : 1033.3344
 RMSE    : 1493.3068
 MAPE    : 0.0295
+
+Run 24 - Evaluate Models with : SBi-GRU
+-------------------------------
+R       : 0.9973
+P-value : 0.0
+MAE     : 0.0139
+RMSE    : 0.0214
+MAPE    : 0.0285
+
+Run 24 - Evaluate Models with : SBi-GRU
+-------------------------------
+R       : 0.9973
+P-value : 0.0
+MAE     : 1009.7681
+RMSE    : 1558.4604
+MAPE    : 0.0283
+
+Run 25 - Evaluate Models with : SBi-GRU
+-------------------------------
+R       : 0.9975
+P-value : 0.0
+MAE     : 0.01
+RMSE    : 0.0152
+MAPE    : 0.0223
+
+Run 25 - Evaluate Models with : SBi-GRU
+-------------------------------
+R       : 0.9975
+P-value : 0.0
+MAE     : 730.4555
+RMSE    : 1111.0175
+MAPE    : 0.0221
+
+Run 26 - Evaluate Models with : SBi-GRU
+-------------------------------
+R       : 0.9975
+P-value : 0.0
+MAE     : 0.0145
+RMSE    : 0.0215
+MAPE    : 0.0294
+
+Run 26 - Evaluate Models with : SBi-GRU
+-------------------------------
+R       : 0.9975
+P-value : 0.0
+MAE     : 1060.1495
+RMSE    : 1569.9273
+MAPE    : 0.0293

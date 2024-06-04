@@ -19,9 +19,9 @@ https://tensorflow-btc-usd-v2.streamlit.app/
 - Anaconda3-2023.09
 - VS Code (version last updated)
 - Google Chrome (version last updated)
+- OS Ubuntu 22.04 LTS
 
 ### Library Requirements
-- Anaconda 1.12.3
 - Python 3.11.8
 - Pandas 2.1.4
 - Numpy 1.26.4
