@@ -62,3 +62,18 @@ MAE     : 938.9755
 RMSE    : 1504.9725
 MAPE    : 0.0262
 
+Run 5 - Evaluate Models with : SBi-LSTM
+-------------------------------
+R       : 0.9962
+P-value : 0.0
+MAE     : 0.0149
+RMSE    : 0.0205
+MAPE    : 0.0368
+
+Run 5 - Evaluate Models with : SBi-LSTM
+-------------------------------
+R       : 0.9962
+P-value : 0.0
+MAE     : 1089.5904
+RMSE    : 1492.9442
+MAPE    : 0.0365
