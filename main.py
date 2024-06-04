@@ -26,19 +26,19 @@ avs.add_vertical_space(2)
 
 # container dataset and visualization
 col1, col2 = st.columns([0.4,0.6], gap="small")
-with col1:
-  dataset = data_collection("BTC-USD.csv")
-  st.info("Dataset of BTC-USD")
-  st.dataframe(dataset, use_container_width=True)
-with col2:
-    st.info("Data Visualization")
-    st.plotly_chart(line_plot(dataset), use_container_width=True)
+
+dataset = data_collection("BTC-USD.csv")
+col1.info("Dataset of BTC-USD")
+col1.dataframe(dataset, use_container_width=True)
+
+col2.info("Data Visualization")
+col2.plotly_chart(line_plot(dataset), use_container_width=True)
 
 # container dataset and visualization
 col1, col2 = st.columns([0.4,0.6], gap="small")
-with col1:
-  st.info("Predictions of BTC-USD Price")
-  form = st.form("my-form");
-  algorithms = form.selectbox("Choose an algorithm", ("SBi-LSTM", "SBi-GRU"), placeholder="Choose an algorithm", index=None)
-  submitted = form.form_submit_button(label="Submit", type="primary", use_container_width=False)
-  st.caption("Execution time is about 5 minutes")
+col1.info("Predictions of BTC-USD Price")
+form = col1.form("my-form");
+
+algorithms = form.selectbox("Choose an algorithm", ("SBi-LSTM", "SBi-GRU"), placeholder="Choose an algorithm", index=None)
+form.caption("Execution time is about 5 minutes")
+submitted = form.form_submit_button(label="Submit", type="primary", use_container_width=False)
