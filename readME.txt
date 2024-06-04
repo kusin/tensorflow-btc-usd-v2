@@ -1,7 +1,7 @@
-GRU - Run14 - Loss Func.jpg
-GRU - Run14 - Prediction - norm.jpg
-GRU - Run14 - Prediction.jpg
+GRU - Run18 - Loss Func.jpg
+GRU - Run18 - Prediction - norm.jpg
+GRU - Run18 - Prediction.jpg
 
-LSTM - Run15 - Loss Func.jpg
-LSTM - Run15 - Prediction - norm.jpg
-LSTM - Run15 - Prediction.jpg
+LSTM - Run20 - Loss Func.jpg
+LSTM - Run20 - Prediction - norm.jpg
+LSTM - Run20 - Prediction.jpg
