@@ -5,7 +5,7 @@ import pandas as pd
 def data_collection(df):
 
   # load dataset
-  dataset = pd.read_csv("../dataset/"+df, parse_dates=['Date'])
+  dataset = pd.read_csv("dataset/"+df, parse_dates=['Date'])
   dataset = dataset[["Date", "Open", "High", "Low", "Close"]]
   # dataset = dataset.set_index("Date")
 
