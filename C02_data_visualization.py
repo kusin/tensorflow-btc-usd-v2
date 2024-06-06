@@ -14,10 +14,10 @@ def line_plot(df):
       go.Scatter(x=df["Date"],y=df[column], mode='lines', name=column)
     )
         
-  # # add colors on lineplot
-  # colorscale = px.colors.diverging.Portland_r
-  # for i, trace in enumerate(fig.data):
-  #   trace.update(line=dict(color=colorscale[i]))
+  # add colors on lineplot
+  colorscale = px.colors.diverging.Portland_r
+  for i, trace in enumerate(fig.data):
+    trace.update(line=dict(color=colorscale[i]))
 
   # update layout lineplot
   fig.update_layout(
