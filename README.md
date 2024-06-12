@@ -1,8 +1,6 @@
 ## Prediction of BTC-USD using algorithms SB-LSTM-RNN and SB-GRU-RNN
 
 ![image](https://github.com/kusin/tensorflow-btc-usd-v2/blob/main/hasil-prediksi-img/Final/Hasil-GRU.jpg)
-![image](https://github.com/kusin/tensorflow-btc-usd-v2/blob/main/hasil-prediksi-img/Final/Hasil-LSTM.jpg)
-![image](https://github.com/kusin/tensorflow-btc-usd/blob/main/img/hasil_prediksi_full%20_SB_GRU_RNN.jpg)
 
 ### Hardware Testing
 - HP Probook 440 G6
