@@ -51,7 +51,7 @@ def get_models(algorithm, x_train, y_train, x_test, y_test):
   )
 
   # 3. predict models
-  predictions = model.predict(x_test)
+  predictions = model.predict(x_test, verbose=0)
 
   # return values
   return history, predictions
