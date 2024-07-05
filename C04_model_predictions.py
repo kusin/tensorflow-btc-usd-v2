@@ -7,7 +7,7 @@ from keras.layers import GRU
 from math import sqrt
 import scipy.stats as sc
 from sklearn.metrics import mean_absolute_error
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import root_mean_squared_error
 from sklearn.metrics import mean_absolute_percentage_error
 
 # libs manipulations array
@@ -62,7 +62,7 @@ def evaluate_models(y_test, predictions):
   r = sc.mstats.pearsonr(y_test, predictions)[0]
   p_value = sc.mstats.pearsonr(y_test, predictions)[1]
   mae = mean_absolute_error(y_test, predictions)
-  rmse = sqrt(mean_squared_error(y_test, predictions))
+  rmse = root_mean_squared_error(y_test, predictions)
   mape = mean_absolute_percentage_error(y_test, predictions)
   
   # return values
