@@ -41,10 +41,10 @@ def get_models(algorithm, x_train, y_train, x_test, y_test):
 
   # fitting models
   history = model.fit(
-    x_train, y_train,
+    x=x_train, y=y_train,
     batch_size=16, epochs=50, verbose="auto", 
     validation_data=(x_test, y_test),
-    use_multiprocessing=False, shuffle=False
+    shuffle=False, use_multiprocessing=False,
   )
 
   # 3. predict models
@@ -63,7 +63,7 @@ def evaluate_models(ytrue,ypred):
   mae   = mean_absolute_error(ytrue,ypred)
   rmse  = root_mean_squared_error(ytrue,ypred)
   mape  = mean_absolute_percentage_error(ytrue,ypred)
-  
+
   # return values
   return np.round(r,4), np.round(p,4), np.round(mae,4), np.round(rmse,4), np.round(mape,4)
 # ----------------------------------------------------------------------------------------

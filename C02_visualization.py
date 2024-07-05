@@ -41,7 +41,7 @@ def lineplot_matplotlib1(x, y, label, title):
 # --------------------------------------------------------------
 
 # visualisasi timeseries plot
-def lineplot3(x1, y1, label1, x2, y2, label2, title):
+def lineplot_matplotlib2(x1, y1, label1, x2, y2, label2, title):
 
   # membuat time series plot
   fig, ax = plt.subplots(figsize = (8,4))
