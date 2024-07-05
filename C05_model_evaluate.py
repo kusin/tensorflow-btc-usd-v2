@@ -1,9 +1,6 @@
 # libs manipulations array
 import numpy as np
 
-# lib manipulations time
-import time as tm
-
 # lib evaluate models
 import scipy.stats as sc
 from sklearn.metrics import mean_absolute_error
