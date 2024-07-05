@@ -27,7 +27,7 @@ def lineplot_matplotlib1(x, y, label, title):
 
   # membuat time series plot
   fig, ax = plt.subplots(figsize = (8,4))
-  ax.plot(x, y, color="tab:blue", label=label, linewidth=2)
+  ax.plot(x, y, color="tab:blue", label=label, linewidth=2.5)
 
   # membuat label-label
   ax.xaxis.set_major_formatter(DateFormatter("%Y"))
@@ -46,8 +46,8 @@ def lineplot_matplotlib2(x1, y1, label1, x2, y2, label2, title):
 
   # membuat time series plot
   fig, ax = plt.subplots(figsize = (8,4))
-  ax.plot(x1, y1, color="tab:blue", label=label1, linewidth=2, linestyle="solid")
-  ax.plot(x2, y2, color="tab:red", label=label2, linewidth=2, linestyle="solid")
+  ax.plot(x1, y1, color="tab:blue", label=label1, linewidth=2.5, linestyle="solid")
+  ax.plot(x2, y2, color="tab:red", label=label2, linewidth=2.5, linestyle="solid")
 
   # membuat label-label
   ax.xaxis.set_major_formatter(DateFormatter("%Y"))
@@ -66,8 +66,8 @@ def lineplot_matplotlib3(x1, y1, label1, x2, y2, label2, title):
 
   # membuat time series plot
   fig, ax = plt.subplots(figsize = (8,4))
-  ax.plot(x1, y1, color="tab:blue", label=label1, linewidth=2, linestyle="solid")
-  ax.plot(x2, y2, color="tab:orange", label=label2, linewidth=2, linestyle="solid")
+  ax.plot(x1, y1, color="tab:blue", label=label1, linewidth=2.5, linestyle="solid")
+  ax.plot(x2, y2, color="tab:orange", label=label2, linewidth=2.5, linestyle="solid")
 
   # membuat label-label
   ax.set_title(title, fontsize=12)
