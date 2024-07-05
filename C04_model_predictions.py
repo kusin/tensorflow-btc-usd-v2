@@ -4,7 +4,6 @@ from keras.layers import LSTM
 from keras.layers import GRU
 
 # lib evaluate models
-from math import sqrt
 import scipy.stats as sc
 from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import root_mean_squared_error

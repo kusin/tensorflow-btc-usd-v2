@@ -20,39 +20,41 @@ def timeseries_matplotlib(df, nm_labels):
     
     # show lineplot
     return plt.show()
-# ----------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------s
 
-def lineplot_matplotlib1(df, nm_labels):
+# visualisasi timeseries plot
+def lineplot_matplotlib1(x, y, label, title):
 
-    # create lineplot
-    fig, ax = plt.subplots(figsize = (8,4))
-    ax.plot(df, label=nm_labels, linewidth=2.5)
-    
-    # set label-labels
-    ax.set_title("", fontsize=12)
-    ax.set_xlabel("", fontsize=10)
-    ax.set_ylabel("", fontsize=10)
-    ax.legend(loc="best")
-    ax.grid(True)
-    
-    # show lineplot
-    return plt.show()
-# ----------------------------------------------------------------------------------------
+  # membuat time series plot
+  fig, ax = plt.subplots(figsize = (8,4))
+  ax.plot(x, y, color="tab:blue", label=label, linewidth=2)
 
-def lineplot_matplotlib2(line1, label1, line2, label2):
+  # membuat label-label
+  ax.set_title(title, fontsize=12)
+  ax.set_xlabel("", fontsize=12)
+  ax.set_ylabel("", fontsize=12)
+  ax.legend(loc="best")
+  ax.grid(True)
 
-    # create lineplot
-    fig, ax = plt.subplots(figsize = (8,4))
-    ax.plot(line1, color="tab:blue", label=label1, linewidth=2)
-    ax.plot(line2, color="tab:red", label=label2, linewidth=2)
-    
-    # set label-labels
-    ax.set_title("", fontsize=12)
-    ax.set_xlabel("", fontsize=10)
-    ax.set_ylabel("", fontsize=10)
-    ax.legend(loc="best")
-    ax.grid(True)
-    
-    # show lineplot
-    return plt.show()
-# ----------------------------------------------------------------------------------------
+  # return values
+  return plt.show()
+# --------------------------------------------------------------
+
+# visualisasi timeseries plot
+def lineplot3(x1, y1, label1, x2, y2, label2, title):
+
+  # membuat time series plot
+  fig, ax = plt.subplots(figsize = (8,4))
+  ax.plot(x1, y1, color="tab:blue", label=label1, linewidth=2, linestyle="solid")
+  ax.plot(x2, y2, color="tab:red", label=label2, linewidth=2, linestyle="solid")
+
+  # membuat label-label
+  ax.set_title(title, fontsize=12)
+  ax.set_xlabel("", fontsize=12)
+  ax.set_ylabel("", fontsize=12)
+  ax.legend(loc="best")
+  ax.grid(True)
+
+  # return values
+  return plt.show()
+# --------------------------------------------------------------
