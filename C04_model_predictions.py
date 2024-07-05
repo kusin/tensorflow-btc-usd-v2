@@ -55,15 +55,15 @@ def get_models(algorithm, x_train, y_train, x_test, y_test):
 # ----------------------------------------------------------------------------------------
 
 # func evaluate models
-def evaluate_models(y_test, predictions):
+def evaluate_models(ytrue,ypred):
 
   # calculate mae, rmse, mape
-  r = sc.mstats.pearsonr(y_test, predictions)[0]
-  p_value = sc.mstats.pearsonr(y_test, predictions)[1]
-  mae = mean_absolute_error(y_test, predictions)
-  rmse = root_mean_squared_error(y_test, predictions)
-  mape = mean_absolute_percentage_error(y_test, predictions)
+  r     = sc.mstats.pearsonr(ytrue,ypred)[0]
+  p     = sc.mstats.pearsonr(ytrue,ypred)[1]
+  mae   = mean_absolute_error(ytrue,ypred)
+  rmse  = root_mean_squared_error(ytrue,ypred)
+  mape  = mean_absolute_percentage_error(ytrue,ypred)
   
   # return values
-  return np.round(r,4), np.round(p_value,4), np.round(mae,4), np.round(rmse,4), np.round(mape,4)
+  return np.round(r,4), np.round(p,4), np.round(mae,4), np.round(rmse,4), np.round(mape,4)
 # ----------------------------------------------------------------------------------------
