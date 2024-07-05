@@ -38,13 +38,17 @@ def preprocessing(dataset):
   train_data, test_data = train_test_split(scaled, train_size=0.8, test_size=0.2, shuffle=False)
 
   # 4. supervised learning
-  # process supervised learning
   x_train, y_train = create_dataset(60, train_data)
   x_test, y_test = create_dataset(60, test_data)
 
-  # reshape input to be [samples, time steps, features]
+  # 5. reshape input to be [samples, time steps, features]
   x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
   x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
 
   # return values
   return scaler, scaled, x_train, y_train, x_test, y_test
+
+# function for inverse normalized
+def inverse(scaler, scaled):
+  return scaler.inverse_transform(scaled.reshape(-1,1))
+# ----------------------------------------------------------------------------------------

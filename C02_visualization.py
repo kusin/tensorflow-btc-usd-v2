@@ -30,6 +30,7 @@ def lineplot_matplotlib1(x, y, label, title):
   ax.plot(x, y, color="tab:blue", label=label, linewidth=2)
 
   # membuat label-label
+  ax.xaxis.set_major_formatter(DateFormatter("%Y"))
   ax.set_title(title, fontsize=12)
   ax.set_xlabel("", fontsize=12)
   ax.set_ylabel("", fontsize=12)
@@ -49,6 +50,7 @@ def lineplot_matplotlib2(x1, y1, label1, x2, y2, label2, title):
   ax.plot(x2, y2, color="tab:red", label=label2, linewidth=2, linestyle="solid")
 
   # membuat label-label
+  ax.xaxis.set_major_formatter(DateFormatter("%Y"))
   ax.set_title(title, fontsize=12)
   ax.set_xlabel("", fontsize=12)
   ax.set_ylabel("", fontsize=12)
