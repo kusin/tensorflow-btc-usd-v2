@@ -10,4 +10,3 @@ def data_collection(df):
   
   # return values
   return dataset
-
