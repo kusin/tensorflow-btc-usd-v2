@@ -27,6 +27,7 @@ dataset = getData()
 # container-header
 with st.container():
   st.markdown("# Model Prediction of BTC-USD Price Using Neural Network")
+# -----------------------------------------------------------------------------------------------------------
 
 # container-content
 with st.container():
@@ -35,12 +36,16 @@ with st.container():
   col1, col2 = st.columns([0.4,0.6], gap="small")
   
   # show-dataset
-  col1.success("Dataset of BTC-USD Price")
-  col1.dataframe(dataset.sort_values(by=["Date"], ascending=False), use_container_width=True)
+  with col1.container():
+    # show-dataset
+    st.success("Dataset of BTC-USD Price")
+    st.dataframe(dataset.sort_values(by=["Date"], ascending=False), use_container_width=True)
   
   # show-visualization
-  col2.success("Data Visualization of BTC-USD Price")
-  col2.plotly_chart(timeseries_plot(dataset))
+  with col2.container():
+    st.success("Data Visualization of BTC-USD Price")
+    st.plotly_chart(timeseries_plot(dataset))
+# -----------------------------------------------------------------------------------------------------------
 
 # container-content
 with st.container():
@@ -70,3 +75,4 @@ with st.container():
   with col3:
     st.success("Data Visualization of BTC-USD Price")
     st.plotly_chart(timeseries_plot(dataset))
+# -----------------------------------------------------------------------------------------------------------
