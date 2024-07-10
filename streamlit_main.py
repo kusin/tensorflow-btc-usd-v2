@@ -65,11 +65,13 @@ with st.container():
   
   # col2-results-prediction
   with col2:
+    # process prediction
     st.success("Results Prediction")
-    st.text("R    : 0.999")
-    st.text("MAE  : 0.999")
-    st.text("RMSE : 0.999")
-    st.text("MAPE : 0.999")
+    if submit and agree:
+      st.text("R    : 0.999")
+      st.text("MAE  : 0.999")
+      st.text("RMSE : 0.999")
+      st.text("MAPE : 0.999")
 
   # col2-data-visualization
   with col3:
