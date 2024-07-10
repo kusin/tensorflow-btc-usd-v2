@@ -40,12 +40,12 @@ def get_models(algorithm, x_train, y_train, x_test, y_test):
     ])
   
   # 2. compile models
-  model.compile(optimizer='adamax', loss='mean_squared_error')
+  model.compile(optimizer=optimizers, loss="mean_squared_error")
 
   # 3. fitting models
   history = model.fit(
     x=x_train, y=y_train,
-    batch_size=16, epochs=50, verbose="auto", 
+    batch_size=batch_size, epochs=epoch, verbose="auto", 
     validation_data=(x_test, y_test),
     shuffle=False, use_multiprocessing=False,
   )
