@@ -35,8 +35,8 @@ def timeseries_plot(df):
   # update layout lineplot
   fig.update_layout(
     title = "Visualization Timeseries of BTC-USD Price",
-    xaxis_title = "",
-    yaxis_title = "",
+    # xaxis_title = "",
+    # yaxis_title = "",
     legend=dict(title='', orientation='h', yanchor='top', y=1.1, xanchor='center', x=0.5),
   )
 

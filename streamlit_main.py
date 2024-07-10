@@ -50,7 +50,7 @@ with st.container():
 
   # col1-config-model
   with col1:
-    st.success("Config Model")
+    st.success("Config Parameter Tuning")
     with st.form("my-form"):
       optimizers = st.selectbox(label="Choose a optimizers", options=("adam", "adamax", "rmsprop", "sgd"), placeholder="Choose a optimizers", index=None)
       batch_size = st.selectbox(label="Choose a batch size", options=("4", "8", "16", "32", "64"), placeholder="Choose a optimizers", index=None)
