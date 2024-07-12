@@ -57,6 +57,7 @@ with st.container():
   with col1:
     st.success("Config Parameter Tuning")
     with st.form("my-form"):
+      algorithms = st.selectbox(label="Choose a algorithms", options=("SBi-LSTM-RNN", "SBi-GRU-RNN"), placeholder="Choose a algorithms", index=None)
       optimizers = st.selectbox(label="Choose a optimizers", options=("adam", "adamax", "rmsprop", "sgd"), placeholder="Choose a optimizers", index=None)
       batch_size = st.selectbox(label="Choose a batch size", options=("4", "8", "16", "32", "64"), placeholder="Choose a optimizers", index=None)
       epoch = st.selectbox(label="Choose a optimizers", options=("25", "50", "75", "100"), placeholder="Choose a optimizers", index=None)
