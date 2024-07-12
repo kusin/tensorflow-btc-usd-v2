@@ -15,9 +15,9 @@ def get_models(algorithm, x_train, y_train, x_test, y_test):
   # }
 
   # set parameter tuning
-  optimizers = "adamax"   # opsi : adam, adamax, rmsprop, sgd
-  batch_size  = 16        # opsi : 2, 4, 8, 16, 32
-  epoch = 50              # opsi : 50, 75, 100
+  optimizers = "adam"   # opsi : adam, adamax, rmsprop, sgd
+  batch_size = 8        # opsi : 2, 4, 8, 16, 32
+  epoch = 75              # opsi : 50, 75, 100
 
   # 1. The LSTM architecture
   if algorithm == "SBi-LSTM-RNN":
