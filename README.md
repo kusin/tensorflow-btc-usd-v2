@@ -21,6 +21,7 @@
 - Pandas 2.1.4
 - Numpy 1.26.4
 - Matplotlib 3.8.0
+- Seaborn 0.13.2
 - Scikit-Learn 1.2.2
 - Keras 2.14.0
 - Tensorflow 2.14.0
