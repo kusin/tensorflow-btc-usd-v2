@@ -20,7 +20,7 @@ def timeseries_matplotlib(df, nm_labels):
     
     # show lineplot
     return plt.show()
-# ----------------------------------------------------------------------------------------s
+# ----------------------------------------------------------------------------------------
 
 # visualisasi timeseries plot
 def lineplot_matplotlib1(x, y, label, title):
