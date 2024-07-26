@@ -8,9 +8,9 @@ from keras.layers import GRU
 def get_models(algorithm, x_train, y_train, x_test, y_test):
 
   # set parameter tuning
-  optimizers = "adam"
-  batch_size = 8
-  epoch = 75
+  optimizers = "adamax"
+  batch_size = 16
+  epoch = 50
 
   # 1. The LSTM architecture
   if algorithm == "SBi-LSTM-RNN":
