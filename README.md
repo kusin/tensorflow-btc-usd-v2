@@ -3,18 +3,18 @@
 ![image](https://github.com/kusin/tensorflow-btc-usd-v2/blob/main/hasil-prediksi-img/Final/Hasil-GRU.jpg)
 
 ### Hardware Testing
-- HP Probook 440 G6
-- Processor intel i5-8265U CPU @ 1,60GHz
-- SSD M2 SATA @ 256GB and SSD 2.5 Inch @ 512GB
-- RAM DDR4 16GB speed 2400MHz
-- VGA Intel UHD 620
-- Resolution of 1368px x 768px
+- HP Omen 15-en0013ax
+- Processor AMD Ryzen 9 4900H
+- SSD NVme @ 256GB and SSD NVme @ 1024GB
+- RAM DDR4 16GB speed 3200MHz
+- VGA NVDIA RTX 2060 GDDR6 6GB
+- Resolution of 1920px x 1080px
 
 ### Software Requirements
 - Anaconda3-2023.09
 - VS Code (version last updated)
 - Google Chrome (version last updated)
-- OS Ubuntu 22.04 LTS
+- Windows 10 22H2 Build 19045
 
 ### Library Requirements
 - Python 3.11.8
