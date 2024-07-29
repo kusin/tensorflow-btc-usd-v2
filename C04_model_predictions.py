@@ -8,7 +8,7 @@ from keras.layers import GRU
 def get_models(algorithm, x_train, y_train, x_test, y_test):
 
   # set parameter tuning
-  optimizers = "adamax"
+  optimizers = "nadam"
   batch_size = 16
   epoch = 50
 
