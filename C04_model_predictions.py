@@ -2,6 +2,7 @@
 import tensorflow as tf
 from keras.layers import LSTM
 from keras.layers import GRU
+from keras.callbacks import EarlyStopping
 # ----------------------------------------------------------------------------------------
 
 # func model predictions
@@ -23,7 +24,7 @@ def get_models(algorithm, x_train, y_train, x_test, y_test):
     ])
   
   # 2. The GRU-RNN architecture
-  if algorithm == "SBi-GRU-RNN":
+  elif algorithm == "SBi-GRU-RNN":
     tf.keras.backend.clear_session()
     model = tf.keras.Sequential([
       tf.keras.layers.Bidirectional(GRU(units=50, return_sequences=True, input_shape=(x_train.shape[1], 1))),

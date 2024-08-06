@@ -19,5 +19,5 @@ def evaluate_models(ytrue,ypred):
   mape  = mean_absolute_percentage_error(ytrue,ypred)
 
   # return values
-  return np.round(r,4), np.round(p,4), np.round(mae,4), np.round(rmse,4), np.round(mape,4)
+  return np.round(r,4), np.round(p,4), np.round(mae,2), np.round(rmse,2), np.round(mape,4)
 # ----------------------------------------------------------------------------------------
