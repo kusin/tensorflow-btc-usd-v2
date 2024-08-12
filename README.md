@@ -1,7 +1,5 @@
 ## Prediction of BTC-USD using algorithms SB-LSTM-RNN and SB-GRU-RNN
 
-![image](https://github.com/kusin/tensorflow-btc-usd-v2/blob/main/hasil-prediksi-img/Final/Hasil-GRU.jpg)
-
 ### Hardware Testing
 - HP Omen 15-en0013ax
 - Processor AMD Ryzen 9 4900H
