@@ -9,8 +9,8 @@ from keras.callbacks import EarlyStopping
 def get_models(algorithm, x_train, y_train, x_test, y_test):
 
   # set parameter tuning
-  optimizers = "adamax"
-  batch_size = 16
+  optimizers = "rmsprop"
+  batch_size = 8
   epoch = 50
 
   # 1. The LSTM architecture
