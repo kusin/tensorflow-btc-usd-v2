@@ -1,0 +1,37 @@
+Catatan penting
+https://chatgpt.com/share/96672721-6cc4-4d96-a22a-88e7182ce0ce
+https://copilot.microsoft.com/sl/b4Nb6S5oO84
+
+Tentu! Adam, Adamax, dan RMSProp adalah tiga algoritma optimasi yang umum digunakan dalam pelatihan model pembelajaran mesin, terutama dalam jaringan saraf. Berikut adalah penjelasan perbedaan ketiganya:
+
+### 1. **Adam (Adaptive Moment Estimation)**
+- **Deskripsi**: Adam menggabungkan ide dari RMSProp dan momentum. Ia menghitung rata-rata bergerak dari gradien (momentum) dan kuadrat gradien untuk setiap parameter.
+- **Kelebihan**: 
+  - Menangani data yang tidak teratur dan memiliki noise dengan baik.
+  - Konvergensi yang cepat dan stabil.
+  - Secara otomatis menyesuaikan laju pembelajaran untuk setiap parameter.
+- **Kekurangan**: 
+  - Dapat terjebak dalam titik minimum lokal dan kadang tidak sebaik algoritma lain pada dataset tertentu.
+
+### 2. **Adamax**
+- **Deskripsi**: Adamax adalah varian dari Adam yang menggunakan norma tak terhingga (infinity norm) sebagai pengganti norma dua dalam pembaruan parameter. Ini membuat Adamax lebih stabil dalam beberapa situasi.
+- **Kelebihan**:
+  - Bermanfaat untuk dataset besar atau ketika gradien sangat berfluktuasi.
+  - Mengurangi kemungkinan divergensi pada beberapa kasus.
+- **Kekurangan**:
+  - Seperti Adam, ia masih dapat terjebak di titik minimum lokal.
+
+### 3. **RMSProp (Root Mean Square Propagation)**
+- **Deskripsi**: RMSProp adalah algoritma yang mengadaptasi laju pembelajaran untuk setiap parameter dengan menghitung rata-rata kuadrat dari gradien. Ini membantu mengatasi masalah vanishing dan exploding gradients.
+- **Kelebihan**:
+  - Sangat efektif untuk pelatihan model yang tidak stabil.
+  - Cocok untuk data non-stasioner dan jaringan saraf yang dalam.
+- **Kekurangan**:
+  - Memerlukan pemilihan parameter yang tepat (seperti laju pembelajaran dan decay rate).
+
+### Perbandingan Singkat:
+- **Momentum**: Adam memiliki momentum, sedangkan RMSProp tidak.
+- **Norma**: Adamax menggunakan norma tak terhingga, sedangkan Adam dan RMSProp menggunakan norma dua.
+- **Stabilitas**: Adamax seringkali lebih stabil pada situasi tertentu dibandingkan Adam dan RMSProp.
+
+Dalam prakteknya, pemilihan algoritma yang tepat tergantung pada karakteristik dataset dan model yang digunakan.
