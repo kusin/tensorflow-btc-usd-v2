@@ -9,8 +9,8 @@ from keras.callbacks import EarlyStopping
 def get_models(algorithm, x_train, y_train, x_test, y_test):
 
   # set parameter tuning
-  optimizers = "adam"
-  batch_size = 25
+  optimizers = "adamax"
+  batch_size = 16
   epoch = 50
 
   # 1. The LSTM architecture
@@ -33,7 +33,7 @@ def get_models(algorithm, x_train, y_train, x_test, y_test):
       tf.keras.layers.Dense(1)
     ])
   
-  # 2. compile models
+  # 3. compile models
   model.compile(optimizer=optimizers, loss="mean_squared_error")
 
   # 3. fitting models

@@ -1,17 +1,7 @@
-# lib manipulation dat
-import pandas as pd
-import numpy as np
-
 # lib visualization data
 import plotly.express as px
 import plotly.graph_objects as go
 # ---------------------------------------------------------------------------
-
-# func load-datase
-def getData():
-  dataset = pd.read_csv("dataset/BTC-USD.csv")
-  dataset = dataset[["Date", "Open", "High", "Low", "Close"]]
-  return np.round(dataset,2)
 
 # func build heatmap coor
 def timeseries_plot(df):
@@ -22,9 +12,7 @@ def timeseries_plot(df):
   # add lineplot with graph object
   for column in df.columns[1:]:
     fig.add_trace(
-      go.Scatter(
-          x=df["Date"],y=df[column], mode='lines', name=column
-      )
+      go.Scatter(x=df["Date"],y=df[column], mode='lines', name=column)
     )
   
   # add colors on lineplot
@@ -34,11 +22,31 @@ def timeseries_plot(df):
 
   # update layout lineplot
   fig.update_layout(
-    title = "Visualization Timeseries of BTC-USD Price",
-    # xaxis_title = "",
-    # yaxis_title = "",
-    legend=dict(title='', orientation='h', yanchor='top', y=1.1, xanchor='center', x=0.5),
+    title = "Visualization of Timeseries Data",
+    legend=dict(orientation="h", xanchor="center", x=0.5, yanchor="top", y=1.1),
   )
 
   # return values
   return fig
+# ---------------------------------------------------------------------------
+
+def results_prediction(algorithms, df):
+
+  # add lineplot with graph object
+  fig = go.Figure()
+  fig.add_trace(go.Scatter(
+    x=df["Date"], y=df["Actual"], mode='lines', line_color="blue", name="actual data"
+  ))
+  fig.add_trace(go.Scatter(
+    x=df["Date"], y=df["Predictions"], mode='lines', line_color="red", name="results predictions"
+  ))
+
+  # update layout lineplot
+  fig.update_layout(
+    title = "Results of Prediction using "+str(algorithms)+" algorithm",
+    legend=dict(orientation="h", xanchor="center", x=0.5, yanchor="top", y=1.1),
+  )
+
+  # return values
+  return fig
+# ---------------------------------------------------------------------------
